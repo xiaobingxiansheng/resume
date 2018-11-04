@@ -1,0 +1,134 @@
+.wrap{
+  overflow: hidden;
+}
+.resume-full-screen {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+.resume-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#302457;
+}
+
+.resume-page-frist{
+  flex-direction: column;  
+  color:white;
+  .resume-imgAvatar{
+    width:200px;
+    height:200px;
+    // box-shadow:0 0 10px white;
+    border-radius:50%;
+    overflow-y: hidden;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmutdb27pjQv7yF0_FlZcKKvPY-LkL81uRH62YURChOjk5PqFJ);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .resume-psName {
+    margin:20px 0 10px;
+    font-size:100px;
+    text-align: center;
+  }
+  .resume-job{
+    width: 42%;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 3px;
+    margin:0;
+  }
+}
+.resume-page-second {
+  transform: translateY(100%);
+  color:white;
+}
+.resume-project-title, .resume-skill-title,.resume-aboutMore-title{
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.resume-page-thirty{
+  transform: translateY(200%);
+  color:white;
+}
+.resume-page-forty{
+  transform: translateY(300%);
+  color:white;
+}
+.resume-project-wrap{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width:80%;
+  .resume-project-content{
+    flex:0 0 45%;
+    font-size:13px;
+    text-align: left;
+    margin-top:10px;
+    .resume-project-img{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      overflow: hidden;
+      float:left;
+      margin-top:5px;
+      img{
+        width:100%;
+      }
+    }
+    .resume-project-description{
+      margin-left: 70px;
+      .resume-project-name{
+        font-size:1.4em;
+        margin:0;
+      }
+      .resume-project-info{
+        margin-top:5px;
+        letter-spacing: 3px;
+        line-height: 1.3em;
+      }
+    }
+  }
+}
+
+.resume-skill-label{
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #1c123c;
+  text-align: center;
+}
+
+.resume-aboutMore-href{
+  margin:0 auto;
+  a{
+    display: block;
+    margin:10px 0;
+    color:white;
+    text-decoration: none;
+  }
+  .icon{
+    margin-right:5px;
+  }
+}
+
+.icon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.icon-react{
+  background-image:url(../img/react.svg);
+}
+.icon-git{
+  background-image:url(../img/git.svg);
+}
