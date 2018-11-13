@@ -7,134 +7,172 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 <body>
     <div class="resume-full-screen wrap">
         <div class="resume-full-screen resume-page-box">
             <section class="resume-full-screen resume-page resume-page-frist">
-                <div class="resume-imgAvatar"></div>
-                <h1 class="resume-psName">
-                    Peter
+                <!-- <div class="resume-imgAvatar" animate="bounce"></div> -->
+                <h1 class="resume-psName" animate="rubberBand">
+                    I'm Peter!
                 </h1>
-                <p class="resume-job">
+                <p class="resume-job" animate="bounceInLeft">
                     我是一个前端学习者，曾就职于某特科技有限公司，负责公众号应用开发，拥有1年的项目经验，目前正在学习流行的框架，可以使用Vue、React做一些小Demo，
                     熟悉ES6，接触过Gulp、Webpack、yeoman等自动化构建工具。本页面也是利用本人使用的yeoman脚手架生成，技术使用原生JavaScript和HTML5+CSS3。
                 </p>
             </section>
             <section class="resume-full-screen resume-page resume-page-second">
                 <div class="resume-project-wrap">
-                    <div class="resume-project-title">
-                        项目经验
+                    <div class="resume-title resume-project-title" animate="zoomIn">
+                        <span>项目经验</span>
                     </div>
-                    <div class="resume-project-content">
-                        <div class="resume-project-img">
-                            <img src="./img/project-1.jpg" alt="">
+                    <div class="resume-project-contentWrap" animate="zoomIn">
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="http://www.cmhg8.com/mp">
+                                    <img src="./img/project-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    聪明惠购(微信号:cmhgsc)
+                                </p>
+                                <p class="resume-project-info">
+                                    我的第一个项目，也是一个真实项目，项目技术涵盖了：js、div+css、ajax。由MUI框架制作的公众号网购应用。
+                                </p>
+                            </div>
                         </div>
-                        <div class="resume-project-description">
-                            <p class="resume-project-name">
-                                聪明惠购(微信号:cmhgsc)
-                            </p>
-                            <p class="resume-project-info">
-                                我的第一个项目，也是一个真实项目，项目技术涵盖了：js、div+css、ajax。由MUI框架制作的公众号网购应用。
-                            </p>
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="https://github.com/xiaobingxiansheng/resume">
+                                    <img src="./img/avatar.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    滚屏简历
+                                </p>
+                                <p class="resume-project-info">
+                                    这个是我做的第一个简历，使用wheel事件 + setTimeout以及CSS3的tranlateY、Animate.CSS制作的
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="resume-project-content">
-                        <div class="resume-project-img">
-                            <img src="./img/avatar.jpg" alt="">
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="http://git.imweb.io/xiaobingxiansheng/react-blog-1">
+                                    <img src="./img/react-blog.png" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    React制作的一个博客
+                                </p>
+                                <p class="resume-project-info">
+                                    这是由React搭建的博客，目前正在一边学习和完善中..
+                                </p>
+                            </div>
                         </div>
-                        <div class="resume-project-description">
-                            <p class="resume-project-name">
-                                滚屏简历
-                            </p>
-                            <p class="resume-project-info">
-                                这个是我做的第一个简历，使用wheel事件 + setTimeout以及CSS3的tranlateY制作的
-                            </p>
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="https://github.com/xiaobingxiansheng/XB_Calculator">
+                                    <img src="./img/jsq.png" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    ES6计算器
+                                </p>
+                                <p class="resume-project-info">
+                                    一个计算器DEMO，使用了事件委托来监听每个按钮的事件
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="resume-project-content">
-                        <div class="resume-project-img">
-                            <img src="./img/react-blog.png" alt="">
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="https://github.com/xiaobingxiansheng/music-pai">
+                                    <img src="./img/pai-music.png" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    Pai-Music
+                                </p>
+                                <p class="resume-project-info">
+                                    一个音乐播放器的DEMO，使用了indexDB作为本地数据库来存储音乐路径，功能尚未完善，但已经可以播放和切歌以及调整速度，仅仅是用来学习总结indexDB。
+                                </p>
+                            </div>
                         </div>
-                        <div class="resume-project-description">
-                            <p class="resume-project-name">
-                                React制作的一个博客
-                            </p>
-                            <p class="resume-project-info">
-                                这是由React搭建的博客，目前正在一边学习和完善中..
-                            </p>
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="https://github.com/xiaobingxiansheng/CSS-SpongeBob">
+                                    <img src="./img/hmbb.png" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    用CSS制作的海绵宝宝
+                                </p>
+                                <p class="resume-project-info">
+                                    使用CSS+div制作的一个海绵宝宝脸部，使用border-radius制作出海绵的各个曲线。
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="resume-project-content">
-                        <div class="resume-project-img">
-                            <img src="./img/jsq.png" alt="">
-                        </div>
-                        <div class="resume-project-description">
-                            <p class="resume-project-name">
-                                ES6计算器
-                            </p>
-                            <p class="resume-project-info">
-                                一个计算器DEMO，使用了事件委托来监听每个按钮的事件
-                            </p>
-                        </div>
-                    </div>
-                    <div class="resume-project-content">
-                        <div class="resume-project-img">
-                            <img src="./img/pai-music.png" alt="">
-                        </div>
-                        <div class="resume-project-description">
-                            <p class="resume-project-name">
-                                Pai-Music
-                            </p>
-                            <p class="resume-project-info">
-                                一个音乐播放器的DEMO，使用了indexDB作为本地数据库来存储音乐路径，功能尚未完善，但已经可以播放和切歌以及调整速度，仅仅是用来学习总结indexDB。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="resume-project-content">
-                        <div class="resume-project-img">
-                            <img src="./img/hmbb.png" alt="">
-                        </div>
-                        <div class="resume-project-description">
-                            <p class="resume-project-name">
-                                用CSS制作的海绵宝宝
-                            </p>
-                            <p class="resume-project-info">
-                                使用CSS+div制作的一个海绵宝宝脸部，使用border-radius制作出海绵的各个曲线。
-                            </p>
+                        <div class="resume-project-content">
+                            <div class="resume-project-img">
+                                <a href="http://admin.828keji.com/index.html?tdsourcetag=s_pcqq_aiomsg">
+                                    <img src="./img/project-9.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="resume-project-description">
+                                <p class="resume-project-name">
+                                    有财万年历-天气预报
+                                </p>
+                                <p class="resume-project-info">
+                                    这也是一个部署到公网的网站，使用promise来做接口联调的需要，使用了swiper、echarts等插件，实现了七天之内的天气预测、生活指数
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="resume-full-screen resume-page resume-page-thirty">
                 <div class="resume-skill-wrap">
-                    <div class="resume-skill-title">技能特长</div>
-                    <div class="resume-skill-label">css</div>
-                    <div class="resume-skill-label">less</div>
-                    <div class="resume-skill-label">javascript</div>
-                    <div class="resume-skill-label">es6</div>
-                    <div class="resume-skill-label">html5</div>
-                    <div class="resume-skill-label">gulp</div>
-                    <div class="resume-skill-label">webpack</div>
+                    <div class="resume-title resume-skill-title" animate="zoomIn"><span>技能特长</span></div>
+                    <div class="resume-skill-label" animate="flash">css</div>
+                    <div class="resume-skill-label" animate="flash">less</div>
+                    <div class="resume-skill-label" animate="flash">javascript</div>
+                    <div class="resume-skill-label" animate="flash">es6</div>
+                    <div class="resume-skill-label" animate="flash">html5</div>
+                    <div class="resume-skill-label" animate="flash">gulp</div>
+                    <div class="resume-skill-label" animate="flash">webpack</div>
                 </div>
             </section>
             <section class="resume-full-screen resume-page resume-page-forty">
                 <div class="resume-aboutMore-wrap">
-                    <div class="resume-aboutMore-title">
-                        了解更多
+                    <div class="resume-title resume-aboutMore-title" animate="zoomIn">
+                        <span>了解更多</span>
                     </div>
                     <p class="resume-aboutMore-href">
-                        <a href="#">
+                        <a href="http://git.imweb.io/xiaobingxiansheng/react-blog-1" animate="shake">
                             <span class="icon icon-react"></span>个人博客(正在建设当中..)
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/xiaobingxiansheng" animate="shake">
                             <span class="icon icon-git"></span>xiaobingxiansheng
+                        </a>
+                        <a href="https://juejin.im/user/5a9101d65188257a690f82c4" animate="shake">
+                            <span class="icon icon-juejin"></span>法令男
                         </a>
                     </p>
                 </div>
             </section>
         </div>
     </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/animate.js"></script>
 </body>
 </html>

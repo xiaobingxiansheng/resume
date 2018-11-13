@@ -78,11 +78,12 @@ function wheel() {
   } else if( event.detail ) {
     delta = -event.detail / 3;
   }
-
-  clearTimeout(wheelAnimate);
-  wheelAnimate = setTimeout(()=>{
-      handle(delta);
-  }, 100);
+  if(wheelAnimate===null){
+    wheelAnimate = setTimeout(()=>{
+        handle(delta);
+    }, 100);
+  }
+  
 }
 
 function handle(delta) {
@@ -92,10 +93,13 @@ function handle(delta) {
   console.log(index)
   // 如果在当前位置就不需要移动了
   if(index == preIndex) {
+    wheelAnimate = null;
     return;
   }
   moveAnimatePage(index, preIndex).then(()=>{
-    
+    console.log("完成！")
+    wheelAnimate = null;
+    animateStart(getElemFromPageNum(index))
   })
 }
 
@@ -109,21 +113,29 @@ function moveAnimatePage(end, start) {
       // 累加
       startY = fx? startY+2 : startY-2;
       var isNeedAnimate = fx? (startY < endY) : (startY > endY);
-      if (isNeedAnimate){
+      if (isNeedAnimate) {
         pageContainer.style.transform = getTranslateYfromIndex(startY);
       } else {
         pageContainer.style.transform = getTranslateYfromIndex(endY);
-        clearAnimateTimer();
         resolve()
+        clearAnimateTimer();
       }
     }, 60/1000)
 
     var clearAnimateTimer = function(){
       clearInterval(animating);
-      animating = null;
     }
   })
-  
-  
 }
+
+
+function getElemFromPageNum(num){
+  return $(`.resume-page:eq(${num})`)[0];
+}
+
+// 一个开始就有动画
+$(()=>{
+  animateStart(getElemFromPageNum(0))
+})
+
 

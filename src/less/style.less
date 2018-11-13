@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#302457;
+  background-color:#4b4242;
 }
 .resume-page-frist{
   flex-direction: column;  
@@ -28,12 +28,13 @@
   background-repeat: no-repeat;
 }
 .resume-psName {
-  margin:20px 0 10px;
-  font-size:100px;
+  margin:20px 0;
+  font-size: 105px;
   text-align: center;
+  font-weight:lighter;
 }
 .resume-job{
-  width: 42%;
+  width: 60%;
   font-size: 14px;
   line-height: 23px;
   letter-spacing: 3px;
@@ -43,11 +44,18 @@
   transform: translateY(100%);
   color:white;
 }
-.resume-project-title, .resume-skill-title,.resume-aboutMore-title{
+.resume-project-title, 
+.resume-skill-title,
+.resume-aboutMore-title{
   flex: 0 0 100%;
   text-align: center;
   font-size: 28px;
   margin-bottom: 40px;
+}
+
+.resume-title>span{
+  padding: 10px;
+  border-bottom:1px solid white;
 }
 .resume-page-thirty{
   transform: translateY(200%);
@@ -58,10 +66,12 @@
   color:white;
 }
 .resume-project-wrap{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
   width:80%;
+}
+.resume-project-contentWrap,.resume-project-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .resume-project-content{
   flex:0 0 45%;
@@ -94,16 +104,17 @@
 }
 .resume-skill-label{
   display: inline-block;
-  padding: 3px 7px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  background-color: #1c123c;
+  padding: 5px 10px;
+  margin: 0 3px;
+  border-radius: 20px;
+  font-size: 13px;
+  background-color: #807b7b;
   text-align: center;
 }
 
 .resume-aboutMore-href{
   margin:0 auto;
+  text-align: center;
 }
 .resume-aboutMore-href a{
   display: block;
@@ -128,4 +139,7 @@
 }
 .icon-git{
   background-image:url(../img/git.svg);
+}
+.icon-juejin{
+  background-image:url(../img/juejin.svg);
 }
