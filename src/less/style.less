@@ -1,145 +1,298 @@
-.wrap{
+.wrap {
   overflow: hidden;
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .resume-full-screen {
   position: absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
+
 .resume-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#4b4242;
+  background-color: #4b4242;
 }
-.resume-page-frist{
-  flex-direction: column;  
-  color:white;
+
+.resume-page-frist {
+  flex-direction: column;
+  color: white;
 }
-.resume-imgAvatar{
-  width:200px;
-  height:200px;
-  border-radius:50%;
+
+.resume-page-frist .resume-title {
+  margin: 10px;
+}
+
+.resume-page-frist .resume-title span {
+  display: inline-block;
+}
+
+.resume-imgAvatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   overflow-y: hidden;
-  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmutdb27pjQv7yF0_FlZcKKvPY-LkL81uRH62YURChOjk5PqFJ);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmutdb27pjQv7yF0_FlZcKKvPY-LkL81uRH62YURChOjk5PqFJ);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .resume-psName {
-  margin:20px 0;
-  font-size: 105px;
+  margin: 20px 0;
+  font-size: 16px;
   text-align: center;
-  font-weight:lighter;
+  font-weight: lighter;
 }
-.resume-job{
-  width: 60%;
+
+.resume-job {
+  max-width: 800px;
+  margin: 0 50px;
   font-size: 14px;
   line-height: 23px;
   letter-spacing: 3px;
-  margin:0;
-}
-.resume-page-second {
-  transform: translateY(100%);
-  color:white;
-}
-.resume-project-title, 
-.resume-skill-title,
-.resume-aboutMore-title{
-  flex: 0 0 100%;
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 40px;
+  word-break: break-all;
 }
 
-.resume-title>span{
+.resume-job::after {
+  content: '|';
+  display: inline-block;
+  animation: flash 1s linear 1s infinite;
+}
+
+.circle-head-img {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle-head-img img {
+  width: 100%;
+}
+
+.resume-page-second {
+  transform: translateY(100%);
+  color: white;
+}
+
+.resume-project-title,
+.resume-skill-title,
+.resume-aboutMore-title {
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.resume-title>span {
   padding: 10px;
-  border-bottom:1px solid white;
+  border-bottom: 1px solid white;
 }
-.resume-page-thirty{
+
+.resume-page-thirty {
   transform: translateY(200%);
-  color:white;
+  color: white;
 }
-.resume-page-forty{
+
+.resume-page-forty {
   transform: translateY(300%);
-  color:white;
+  color: white;
 }
-.resume-project-wrap{
-  width:80%;
+
+.resume-project-wrap {
+  width: 80%;
 }
-.resume-project-contentWrap,.resume-project-wrap{
+
+.resume-project-contentWrap,
+.resume-project-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.resume-project-content{
-  flex:0 0 45%;
-  font-size:13px;
+
+.resume-project-content {
+  flex: 0 0 45%;
+  font-size: 13px;
   text-align: left;
-  margin-top:10px;
+  margin-top: 10px;
 }
-.resume-project-img{
-  width:50px;
-  height:50px;
-  border-radius:50%;
+
+.resume-project-content>a {
+  display: block;
+  height: 100%;
+}
+
+.resume-project-img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   overflow: hidden;
-  float:left;
-  margin-top:5px;
+  float: left;
+  margin-top: 5px;
+  box-shadow: 2px 2px 5px #000;
 }
-.resume-project-img img{
-  width:100%;
+
+.resume-project-img img {
+  width: 100%;
 }
-.resume-project-description{
+
+.resume-project-img a {
+  width: 100%;
+  height: 100%;
+}
+
+.resume-project-description {
   margin-left: 70px;
 }
-.resume-project-name{
-  font-size:1.4em;
-  margin:0;
+
+.resume-project-name {
+  font-size: 1.4em;
+  margin: 0;
 }
-.resume-project-info{
-  margin-top:5px;
+
+.resume-project-info {
+  margin-top: 5px;
   letter-spacing: 3px;
   line-height: 1.3em;
 }
-.resume-skill-label{
+
+.resume-skill-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resume-skill-label {
   display: inline-block;
   padding: 5px 10px;
-  margin: 0 3px;
+  margin: 3px;
   border-radius: 20px;
   font-size: 13px;
   background-color: #807b7b;
   text-align: center;
 }
 
-.resume-aboutMore-href{
-  margin:0 auto;
+.resume-aboutMore-href {
+  font-size: 14px;
+  margin: 0 auto;
   text-align: center;
 }
-.resume-aboutMore-href a{
+
+.resume-aboutMore-href a {
   display: block;
-  margin:10px 0;
-  color:white;
+  margin: 10px 0;
+  color: white;
   text-decoration: none;
 }
-.resume-aboutMore-href .icon{
-  margin-right:5px;
+
+.resume-aboutMore-href .icon {
+  margin-right: 5px;
 }
 
-.icon{
+.icon {
   display: inline-block;
   width: 20px;
   height: 20px;
   vertical-align: middle;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.icon-react{
-  background-image:url(../img/react.svg);
+
+.icon-react {
+  background-image: url(../img/react.svg);
 }
-.icon-git{
-  background-image:url(../img/git.svg);
+
+.icon-git {
+  background-image: url(../img/git.svg);
 }
-.icon-juejin{
-  background-image:url(../img/juejin.svg);
+
+.icon-juejin {
+  background-image: url(../img/juejin.svg);
+}
+
+.resume-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  color: #fff;
+  background-color: black;
+  font-size: 12px;
+  opacity: .5;
+  z-index: 1;
+}
+
+.resume-minScr-href {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.resume-alert-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .4);
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms
+}
+
+.resume-alert-wrap__active {
+  opacity: 1
+}
+
+.resume-alert-info {
+  width: 65%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border: 1px solid #fff;
+  padding: 10px 15px 35px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+.resume-alert-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  width: 100%;
+}
+
+.resume-alert-button::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  background-color: #ccc;
+  transform: scaleY(0.5);
 }
