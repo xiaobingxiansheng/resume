@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify-es').default;
+const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 const htmlmin = require('gulp-htmlmin');
 const autoprefix = require('gulp-autoprefixer');
@@ -134,7 +135,17 @@ gulp.task('dev-revHtml', function(){
 });
 
 
-gulp.task('pro', gulp.series('pro-compressJs', 'pro-less', 'pro-imageMin'));
+gulp.task('clean', function (cb) {
+  return del([
+    compressConfig.distCssPath,
+    compressConfig.distImgPath,
+    compressConfig.distJsPath,
+    compressConfig.distHtmlPath
+  ], cb);
+});
+
+
+gulp.task('pro', gulp.series('clean', 'dev-hashJs', 'pro-less', 'pro-imageMin', 'pro-devHtml'));
 
 gulp.task('dev', gulp.series('dev-hashImg', 'dev-hashJs', 'dev-hashLess', 'dev-revLess', 'dev-revHtml', () => {
     browserSync({
